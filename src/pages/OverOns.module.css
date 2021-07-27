@@ -1,0 +1,129 @@
+:root{
+    --border-radius: 25px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    font-size: 2vw;
+    flex: 5;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat,sans-serif;
+}
+.team-overlay{
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+    flex: 4;
+    width: 70%;
+}
+.header{
+    flex: 1;
+    display: flex;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 3;
+
+}
+.team-card-one, .team-card-two{
+    display: flex;
+    border-radius: var(--border-radius);
+    flex-direction: row;
+    align-items: center;
+    flex: 1.5;
+    font-size: 0.8em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.team-card-two{
+    margin-top: 2%;
+}
+.card-description-one, .card-description-two{
+    display: flex;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    background-color: white;
+    flex: 0.75;
+    height: 100%;
+    padding: 10px;
+    flex-direction: column;
+    text-align: start;
+    justify-content: start;
+}
+.card-image-one, .card-image-two {
+    flex: 0.3;
+    height: 100%;
+}
+.card-image-one img, .card-image-two img{
+    display: block;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    width: 100%;
+    height: 100%;
+}
+.card-description-header, .card-description-sub {
+    margin: 0;
+}
+.card-description-header {
+    font-weight: 900;
+    font-size: 1.2em;
+}
+.card-description-sub {
+    color: #FFAA00;
+    font-weight: 400;
+    font-size: 0.6em;
+}
+.card-description-text {
+    font-size: 0.5em;
+}
+.card-description-text-two {
+    font-size: 0.5em;
+}
+@media only screen and (max-width: 1024px){
+    .container {
+        font-size: 6vw;
+        height: fit-content;
+    }
+    .team-overlay{
+        width: 100%;
+    }
+    .team-card-one, .team-card-two{
+        display: flex;
+        flex-direction: column;
+        border: none;
+        flex: 1;
+        font-size: 1em;
+        box-shadow: none;
+    }
+    .card-description-header {
+        font-weight: 900;
+        font-size: 0.8em;
+    }
+    .card-description-one, .card-description-two{
+        display: flex;
+        box-sizing: border-box;
+        border-radius: 10px;
+        flex-wrap: wrap;
+        background-color: white;
+        flex: 0.75;
+        height: 100%;
+        padding: 10px;
+        flex-direction: column;
+        text-align: start;
+        justify-content: start;
+    }
+    .card-image-one img, .card-image-two img{
+        border-radius: var(--border-radius);
+        border: 1px solid #FFAA00;
+    }
+    .card-image-one, .card-image-two {
+        margin: 10px 0;
+
+    }
+
+}

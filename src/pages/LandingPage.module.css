@@ -1,0 +1,110 @@
+.logo {
+    display: flex;
+    flex: 0.4;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+.menu-big {
+    display: flex;
+    flex: 0.6;
+    align-items: center;
+}
+.landing-page{
+    display: flex;
+    flex: 5;
+    position: relative;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 1em;
+    overflow: hidden;
+}
+.landing-page-header {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    flex-direction: row;
+    width: 100%;
+}
+.landing-page-center {
+    flex:4;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.landing-page-picture {
+    height: 80%;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    right: 7%;
+    display: flex;
+    justify-content: flex-end;
+}
+.landing-page-picture img {
+    width: 50%;
+    height: auto;
+}
+.landing-page-text {
+    display: flex;
+    flex:0.4;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    text-shadow: black 1px 1px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+
+}
+.landing-page-text p {
+    margin: 0;
+}
+#landing-page-text-top {
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    font-size: 1.1em;
+    color: white;
+    margin-bottom: 2%;
+}
+#landing-page-text-bottom {
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 0.8em;
+    color: white;
+}
+@media only screen and (max-width:800px)  {
+    .logo {
+        flex: 0.9;
+    }
+    .menu-big {
+        display: none;
+    }
+    .landing-page{
+        font-size: 1.4em;
+    }
+    .landing-page-picture {
+        height: 100%;
+        width: auto;
+    }
+    .landing-page-center {
+        flex-direction: column;
+        align-items: center;
+    }
+    .landing-page-text {
+        width: 80%;
+        height: auto;
+        justify-self: center;
+    }
+    .landing-page-picture {
+        height: 40%;
+        width: auto;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        justify-content: flex-end;
+    }
+    .landing-page-picture img {
+        width: auto;
+        height: 100%;
+    }
+}

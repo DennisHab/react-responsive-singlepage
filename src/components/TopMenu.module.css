@@ -1,0 +1,25 @@
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    color: white;
+    text-shadow: black 1px 0;
+}
+.menu li {
+    margin: 0 20px ;
+    padding-bottom: 5px;
+}
+.menu li:hover {
+    border-bottom: #FFAA00 2px solid;
+    padding-bottom: 3px;
+}
+
+a:visited, a {
+    color: white;
+    text-decoration: none;
+}
+

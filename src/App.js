@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import topFunction from "./helpers/topFunction";
+import scrollFunction from "./helpers/scrollFunction";
+import LandingPage from "./pages/LandingPage";
+import OverOns from "./pages/OverOns";
+import CursusAanbod from "./pages/CursusAanbod";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    window.onscroll = function() {scrollFunction(document.getElementById("scroll-back-underlay"))};
+
+    return (
+        <div className="container">
+            <div id="scroll-back-underlay">
+            <i id="scroll-back-button" onClick={topFunction}/>
+            </div>
+            <div id="landing-page">
+                <LandingPage/>
+            </div>
+            <div id="over-ons">
+                <OverOns />
+            </div>
+            <div id="cursus-aanbod">
+                <CursusAanbod/>
+            </div>
+        </div>
+    );
 }
 
 export default App;

@@ -1,0 +1,13 @@
+.text {
+    margin: 0;
+}
+.container {
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    display: flex;
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    vertical-align: center;
+}
