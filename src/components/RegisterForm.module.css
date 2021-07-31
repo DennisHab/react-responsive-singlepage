@@ -1,8 +1,43 @@
 .container{
     display: flex;
-    flex-direction: column;
-    background-color: white;
+    width: 80%;
+    height: 80%;
+    font-size: 1.7vw;
+    font-family: Montserrat, sans-serif;
 }
-.container button{
-    width: 40%;
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.form input {
+    width: 60%;
+    font-size: 0.8em;
+}
+.label {
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+    font-size: 0.9em;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+}
+.label select{
+    width: 60%;
+    text-align: center;
+}
+.label option:checked{
+    background-color: #FFAA00;
+}
+.error {
+    font-size: 0.7em;
+    color: orangered;
+}
+#button {
+    margin-top: 5%;
+    justify-self: center;
+    width: 50%;
 }

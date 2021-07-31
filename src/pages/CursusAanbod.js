@@ -19,6 +19,7 @@ export default function CursusAanbod() {
     function imageClick() {
         window.open(image)
     }
+
     return (
         <div className={styles.container}>
             <div className={styles.header}>
@@ -50,9 +51,10 @@ export default function CursusAanbod() {
                     </ul>
                 </div>
                 <div className={styles["cursus-center-content"]} style={{fontSize: content === "eg3" || "fun" ? "0.44em" : "0.47em"}}>
+                    {!form  && <>
                     <h1>{data[content].title}</h1>
                     <p>{data[content].content}</p>
-                    <div className={styles["cursus-center-content-list-image"]}
+                      <div className={styles["cursus-center-content-list-image"]}
                          style={{justifyContent: !data[content].list && "center"}}>
                         <ul className={styles["cursus-center-content-list"]}
                             style={{width: !data[content].list && "0%"}}>
@@ -72,14 +74,14 @@ export default function CursusAanbod() {
                         </div>
                     </div>
                     <p>{data[content].duration}</p>
-                    <h2>Prijs: {data[content].cost}</h2>
-                    <div className={styles.form}>
+                    <h2>Prijs: {data[content].cost}</h2></>}
+                    <div className={styles.form} style={{display: form && "flex", flex: form && "5"}}>
                         <RegisterForm
                             content={content}
                         />
                     </div>
                     <div className={styles["cursus-center-register"]}>
-                        <button className={styles["cursus-center-button"]} type="button"> Inschrijven</button>
+                        <Button id={styles["cursus-center-button"]} type="button" onClick={()=> toggleForm(!form)} text={!form? "Inschrijven" : "Terug"}/>
                     </div>
                 </div>
             </div>

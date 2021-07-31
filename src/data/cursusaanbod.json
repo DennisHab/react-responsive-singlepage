@@ -20,7 +20,8 @@
       "Gebit tonen"
     ],
     "duration": "Deze cursus bestaat uit: 11 weken incl examen en Diploma uitreiking",
-    "cost": "€85"
+    "cost": "€85",
+    "startDates": ["10-08-2021", "10-12-2021", "10-03-2022"]
   },
   "eg1": {
     "title": "EG1 Cursus",

@@ -8,15 +8,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
     font-family: Montserrat,sans-serif;
 }
 .form {
     overflow: hidden;
-    width: 50%;
-}
-.cursus-center-button:active .form {
     width: 100%;
+    flex: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .header{
