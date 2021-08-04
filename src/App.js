@@ -1,12 +1,22 @@
 import './App.css';
 import topFunction from "./helpers/topFunction";
+import {lazy, Suspense, useState, useEffect} from 'react';
 import scrollFunction from "./helpers/scrollFunction";
 import LandingPage from "./pages/LandingPage";
 import OverOns from "./pages/OverOns";
-import CursusAanbod from "./pages/CursusAanbod";
+import {getData} from "./helpers/getData";
+const CursusAanbod = lazy(() => import("./pages/CursusAanbod"))
 
 function App() {
+    const [content, setContent] = useState("puppy");
+    const [courses, setCourses] = useState(null);
+    const [overOns, setOverOns] = useState(null);
+    const [loading, setLoading] = useState(false);
     window.onscroll = function() {scrollFunction(document.getElementById("scroll-back-underlay"))};
+
+    useEffect(()=>{
+        getData({setLoading, setCourses, content, setOverOns} )
+    }, [content]);
 
     return (
         <div className="container">
@@ -17,10 +27,18 @@ function App() {
                 <LandingPage/>
             </div>
             <div id="over-ons">
-                <OverOns />
+                <OverOns
+                    overOns = {overOns}
+                />
             </div>
             <div id="cursus-aanbod">
-                <CursusAanbod/>
+                <Suspense fallback={<h1>LOADING</h1>}>
+                <CursusAanbod
+                    content = {content}
+                    setContent = {setContent}
+                    courses = {courses}
+                />
+                </Suspense>
             </div>
         </div>
     );

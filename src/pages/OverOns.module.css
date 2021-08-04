@@ -52,6 +52,7 @@
     flex: 0.75;
     height: 100%;
     padding: 10px;
+    white-space: pre-line;
     flex-direction: column;
     text-align: start;
     justify-content: start;

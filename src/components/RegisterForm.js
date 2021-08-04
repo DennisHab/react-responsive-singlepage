@@ -3,7 +3,7 @@ import styles from './RegisterForm.module.css';
 import Button from "./Button";
 import capitalizeFirstLetter from "../helpers/capitalizeFirstLetter";
 
-export default function RegisterForm({content}) {
+export default function RegisterForm({content, startDate}) {
     const {register, handleSubmit, formState: {errors}} = useForm();
     const courseData = require('../data/cursusaanbod.json');
 
